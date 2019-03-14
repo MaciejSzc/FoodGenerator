@@ -12,6 +12,7 @@ public class RecipeServices {
 
     public void addRecipe(RecipeForm recipeForm) {
         RecipeEntity recipeEntity = new RecipeEntity(recipeForm.getName(),recipeForm.getIngredients(),recipeForm.getTools(),recipeForm.getInstruction());
+
         recipeData.add(recipeEntity);
     }
 
@@ -19,6 +20,9 @@ public class RecipeServices {
         return recipeData;
     }
 
+        for(RecipeEntity nim : )
 
 
-}
+    }
+
+

@@ -6,9 +6,15 @@
 </head>
 <body>
 <div th:each="food : ${lists}">
-    <span th:text="${food.getName()}"></span>
-    <span th:text="${food.getSurname()}"></span>
-    <span th:text="${food.getTelephone()}"></span>
+    <span>Danie:</span>
+    <span th:text="${food.getName()}"></span><br/>
+    <span>Potrzebne składniki</span>
+    <span th:text="${food.getIngredients()}"></span><br/>
+    <span>Potrzebne narzędzia</span>
+    <span th:text="${food.getTools()}"></span><br/>
+    ><span>Sposób przyrządzania</span>
+    <span th:text="${food.getInstruction()}"></span><br/>
+
 
 </div>
 

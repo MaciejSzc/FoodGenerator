@@ -1,22 +1,37 @@
 package pl.maciej.MenuCreator.models;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class RecipeEntity {
     private String name;
     private String ingredients;
+    private List<String> ingredientsToList;
     private String tools;
     private String instruction;
 
     public RecipeEntity(String name, String ingredients, String tools, String instruction) {
+        this.ingredientsToList = new ArrayList<>();
         this.name = name;
         this.ingredients = ingredients;
         this.tools = tools;
         this.instruction = instruction;
+
+        List<String> list = new ArrayList<>(Arrays.asList(ingredients.split(" , ")));
+        ingredientsToList.addAll(list);
+
     }
+
+
 
     public String getName() {
         return name;
+    }
+
+    public List<String> getIngredientsToList() {
+        return ingredientsToList;
     }
 
     public void setName(String name) {

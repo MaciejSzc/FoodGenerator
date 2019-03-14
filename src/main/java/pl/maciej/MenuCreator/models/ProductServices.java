@@ -13,6 +13,7 @@ public class ProductServices {
     public void addProduct(ProductForm productForm) {
         ProductEntity productEntity = new ProductEntity(productForm.getName(), productForm.getProtein(),
                 productForm.getFat(), productForm.getCarbo(), productForm.getKcal(), productForm.getCount());
+
         productData.add(productEntity);
     }
 
