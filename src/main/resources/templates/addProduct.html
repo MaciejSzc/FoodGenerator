@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>addProduct</title>
+</head>
+<body>
+
+<h1>Dodaj produkt:</h1>
+<form action="/addproduct" method="post" th:object="${productForm}">
+    Nazwa produktu: <input type="text" th:field="*{name}" required>
+    <br/><br/>
+    Ilość białka: <input type="text" th:field="*{protein}" required><br/>
+    <br/><br/>
+    Ilość tłuszczu: <input type="text" th:field="*{fat}" required><br/>
+    <br/><br/>
+    Ilość węglowodanów: <input type="text" th:field="*{carbo}" required><br/>
+    <br/><br/>
+    Wartość KCAL: <input type="text" th:field="*{kcal}" required><br/>
+    <br/><br/>
+    Liczba sztuk: <input type="text" th:field="*{count}" required><br/>
+    <br/><br/>
+    <input type="submit" value="Wyślij">
+</form>
+<h1><a href="/menu">Menu</a></h1>
+<h1><a href="/addrecipe">Dodaj przepis</a></h1>
+
+</body>
+
+</body>
+</html>

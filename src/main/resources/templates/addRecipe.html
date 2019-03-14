@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>addRecipe</title>
+</head>
+<body>
+<h1>Dodaj przepis:</h1>
+<form action="/addrecipe" method="post" th:object="${recipeForm}">
+    Nazwa dania: <input type="text" th:field="*{name}" required>
+    <br/><br/>
+    Potrzebne składniki: <input type="text" th:field="*{ingredients}" required><br/>
+    <br/><br/>
+    Wymagania sprzętowe: <input type="text" th:field="*{tools}" required><br/>
+    <br/><br/>
+    Opis prygotowania: <input type="text" th:field="*{instruction}" required><br/>
+    <br/><br/>
+    <input type="submit" value="Wyślij">
+</form>
+<h1><a href="/menu">Menu</a></h1>
+<h1><a href="/addproduct">Dodaj produkt</a></h1>
+
+</body>
+</html>
