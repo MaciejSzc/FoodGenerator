@@ -5,8 +5,9 @@
     <title>addRecipe</title>
 </head>
 <body>
+<span th:text="${tekst}"></span>
 <h1>Dodaj przepis:</h1>
-<form action="/addrecipe" method="post" th:object="${recipeForm}">
+<form action="/add/recipe" method="post" th:object="${recipe_form}">
     Nazwa dania: <input type="text" th:field="*{name}" required>
     <br/><br/>
     Potrzebne składniki: <input type="text" th:field="*{ingredients}" required><br/>
@@ -18,7 +19,7 @@
     <input type="submit" value="Wyślij">
 </form>
 <h1><a href="/menu">Menu</a></h1>
-<h1><a href="/addproduct">Dodaj produkt</a></h1>
+<h1><a href="/add/product">Dodaj produkt</a></h1>
 
 </body>
 </html>
