@@ -10,6 +10,10 @@ public class ProductServices {
 
     private List<ProductEntity> productData = new ArrayList<>();
 
+    public List<ProductEntity> getProductData() {
+        return productData;
+    }
+
     public void addProduct(ProductForm productForm) {
         ProductEntity productEntity = new ProductEntity(productForm.getName(), productForm.getProtein(),
                 productForm.getFat(), productForm.getCarbo(), productForm.getKcal(), productForm.getCount());

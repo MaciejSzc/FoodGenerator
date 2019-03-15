@@ -1,19 +1,20 @@
 package pl.maciej.MenuCreator.models;
 
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Pattern;
 import java.util.Objects;
 
 public class ProductForm {
     private String name;
-    @Pattern(regexp = "[0-9]{1,6}")
+   @Max(1000)
     private int protein;
-    @Pattern(regexp = "[0-9]{1,6}")
+    @Max(1000)
     private int fat;
-    @Pattern(regexp = "[0-9]{1,6}")
+    @Max(1000)
     private int carbo;
-    @Pattern(regexp = "[0-9]{1,6}")
+    @Max(1000)
     private int kcal;
-    @Pattern(regexp = "[0-9]{1,6}")
+    @Max(1000)
     private int count;
 
 

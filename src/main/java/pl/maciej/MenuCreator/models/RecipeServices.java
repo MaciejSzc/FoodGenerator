@@ -10,6 +10,10 @@ public class RecipeServices {
 
     private List<RecipeEntity> recipeData = new ArrayList<>();
 
+    public List<RecipeEntity> getRecipeData() {
+        return recipeData;
+    }
+
     public void addRecipe(RecipeForm recipeForm) {
         RecipeEntity recipeEntity = new RecipeEntity(recipeForm.getName(),recipeForm.getIngredients(),recipeForm.getTools(),recipeForm.getInstruction());
 
@@ -20,7 +24,6 @@ public class RecipeServices {
         return recipeData;
     }
 
-        for(RecipeEntity nim : )
 
 
     }

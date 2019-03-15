@@ -20,17 +20,17 @@ public class RecipeController {
     RecipeServices recipeServices;
 
     @GetMapping("/add/recipe")
-    public String phone(Model model){
+    public String recipe(Model model){
 
         model.addAttribute("recipe_form", new RecipeForm());
 
-        return "addProduct";
+        return "addRecipe";
     }
 
 
     @PostMapping("/add/recipe")
 
-    public String phone(@ModelAttribute @Valid RecipeForm recipeForm,
+    public String phone(@ModelAttribute("recipe_form") @Valid RecipeForm recipeForm,
                         BindingResult bindingResult,
                         Model model) {
         if (bindingResult.hasErrors()) {

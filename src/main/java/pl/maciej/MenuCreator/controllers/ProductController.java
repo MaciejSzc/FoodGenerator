@@ -29,7 +29,7 @@ public class ProductController {
 
     @PostMapping("/add/product")
 
-    public String phone(@ModelAttribute @Valid ProductForm productForm,
+    public String phone(@ModelAttribute("product_form") @Valid ProductForm productForm,
                         BindingResult bindingResult,
                         Model model) {
         if (bindingResult.hasErrors()) {
@@ -38,7 +38,7 @@ public class ProductController {
         }
         productServices.addProduct(productForm);
 
-        return "addProuct";
+        return "addProduct";
 
     }
 
